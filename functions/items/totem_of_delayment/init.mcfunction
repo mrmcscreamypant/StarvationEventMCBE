@@ -1,0 +1,2 @@
+scoreboard objectives add totem_of_delayment_timer dummy
+scoreboard objectives add totem_of_delayment_seconds dummy

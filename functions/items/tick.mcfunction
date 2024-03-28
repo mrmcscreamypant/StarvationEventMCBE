@@ -1,0 +1,1 @@
+function items/totem_of_delayment/tick

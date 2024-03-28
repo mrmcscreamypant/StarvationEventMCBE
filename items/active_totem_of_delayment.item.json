@@ -1,0 +1,31 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "se:active_totem_of_delayment",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "active_totem_of_delayment"
+			},
+			"minecraft:glint": true,
+			"minecraft:wearable": {
+				"slot": "slot.weapon.offhand",
+				"protection": 0
+			}
+		},
+		"events": {
+			"durability_update": {
+    				"damage": {
+       					 "type": "none",
+        				"amount": 1,
+        				"target": "self"
+    				}
+			}
+		}
+	}
+}

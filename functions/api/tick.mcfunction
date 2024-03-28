@@ -1,0 +1,1 @@
+function api/on_player_death

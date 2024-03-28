@@ -1,0 +1,7 @@
+{
+  "values": [
+    "items/tick",
+    "api/tick",
+    "init/pre_init"
+  ]
+}
