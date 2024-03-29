@@ -3,7 +3,6 @@ import { world, system, EquipmentSlot } from '@minecraft/server';
 function init() {
 
 world.afterEvents.entityHurt.subscribe(event => {
-
     const equipment = event.hurtEntity.getComponent("minecraft:equippable")
     if (!equipment) return
     const weapon = equipment.getEquipment(EquipmentSlot.Offhand)

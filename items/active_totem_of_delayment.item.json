@@ -1,10 +1,11 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.20.50",
 	"minecraft:item": {
 		"description": {
 			"identifier": "se:active_totem_of_delayment",
 			"menu_category": {
-				"category": "equipment"
+				"category": "equipment",
+				"is_hidden_in_commands": false
 			}
 		},
 		"components": {
@@ -16,15 +17,6 @@
 			"minecraft:wearable": {
 				"slot": "slot.weapon.offhand",
 				"protection": 0
-			}
-		},
-		"events": {
-			"durability_update": {
-    				"damage": {
-       					 "type": "none",
-        				"amount": 1,
-        				"target": "self"
-    				}
 			}
 		}
 	}
