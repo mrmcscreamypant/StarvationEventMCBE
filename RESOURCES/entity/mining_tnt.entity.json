@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "se:mining_tnt",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/mining_tnt"
+			},
+			"geometry": {
+				"default": "geometry.mining_tnt"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#5dcc23",
+				"overlay_color": "#1a4ea0"
+			}
+		}
+	}
+}

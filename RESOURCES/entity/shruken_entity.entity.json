@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "se:shruken_entity",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/shruken_entity"
+			},
+			"geometry": {
+				"default": "geometry.shruken_entity"
+			},
+			"render_controllers": ["controller.render.default"]
+		}
+	}
+}

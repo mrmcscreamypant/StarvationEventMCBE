@@ -1,0 +1,63 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ornothopter",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 13,
+				"visible_bounds_height": 8,
+				"visible_bounds_offset": [0, 3, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 14, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 14, 0],
+					"rotation": [15, 0, 0],
+					"cubes": [
+						{"origin": [-17, 17, -26], "size": [34, 32, 50], "uv": [0, 97]}
+					]
+				},
+				{
+					"name": "steering_wheel",
+					"parent": "body",
+					"pivot": [0, 27, -7],
+					"cubes": [
+						{"origin": [-3, 24, -9], "size": [6, 17, 2], "uv": [32, 0]}
+					]
+				},
+				{
+					"name": "wheel_back_left",
+					"parent": "root",
+					"pivot": [8, 50, 21],
+					"cubes": [
+						{"origin": [11, 45, 16], "size": [6, 10, 10], "uv": [0, 20]}
+					]
+				},
+				{
+					"name": "wheel_back_right",
+					"parent": "root",
+					"pivot": [-8, 50, 21],
+					"cubes": [
+						{"origin": [-95, 54, 16], "size": [84, 1, 10], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tail",
+					"parent": "root",
+					"pivot": [-10, 19, 13],
+					"cubes": [
+						{"origin": [-7.5, 37, 12], "size": [15, 15, 82], "uv": [0, 0]},
+						{"origin": [-15, 34, 12], "size": [30, 19, 28], "uv": [112, 0]}
+					]
+				}
+			]
+		}
+	]
+}

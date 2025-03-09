@@ -1,0 +1,31 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "se:ornothopter",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/ornothopter"
+			},
+			"geometry": {
+				"default": "geometry.ornothopter"
+			},
+			"render_controllers": ["controller.render.default"],
+			"animations": {
+				"fly": "animation.ornothopter.fly",
+				"drive": "controller.animation.ornothopter.main"
+			},
+			"scripts": {
+				"initialize": ["variable.steering = 0;"],
+				"pre_animation": ["query.has_rider ? (variable.steering = Math.lerp(variable.steering, query.yaw_speed, 0.15));"],
+				"animate": ["drive"]
+			},
+			"spawn_egg": {
+				"base_color": "#935b7b",
+				"overlay_color": "#a0cfe5"
+			}
+		}
+	}
+}

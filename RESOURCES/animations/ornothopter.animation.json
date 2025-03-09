@@ -1,0 +1,41 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ornothopter.un_tilt": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.75,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": [30, 0, 0],
+						"0.75": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, -4, 0],
+						"0.75": [0, 0, 0]
+					}
+				},
+				"wheel_back_right": {
+					"rotation": [0, 0, "math.sin(query.get_animation_frame* 1024)*20"]
+				}
+			}
+		},
+		"animation.ornothopter.fly": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": ["query.ground_speed", 0, 0],
+						"1.0": ["query.modified_move_speed*20", 0, 0]
+					},
+					"position": [0, "math.sin(query.time_stamp)", 0],
+					"scale": 1
+				},
+				"wheel_back_right": {
+					"rotation": [0, 0, "math.sin(query.time_stamp* 100)*32"]
+				}
+			}
+		}
+	}
+}

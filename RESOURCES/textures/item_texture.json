@@ -1,0 +1,25 @@
+{
+	"texture_data": {
+		"actinium": {
+			"textures": "textures/items/actinium.png"
+		},
+		"bomb": {
+			"textures": "textures/items/bomb.png"
+		},
+		"smoke_bomb": {
+			"textures": "textures/items/smoke_bomb.png"
+		},
+		"fire_bomb": {
+			"textures": "textures/items/fire_bomb.png"
+		},
+		"shruken": {
+			"textures": "textures/items/shruken.png"
+		},
+		"active_totem_of_delayment": {
+			"textures": "textures/items/totem_of_delayment.png"
+		},
+		"totem_of_delayment": {
+			"textures": "textures/items/totem_of_delayment.png"
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.ornothopter.main": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": ["fly"],
+					"blend_transition": 1
+				}
+			}
+		}
+	}
+}

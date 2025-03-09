@@ -1,0 +1,64 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.undead_pillager.crossbow.charge": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": ["math.lerp(-90.0 + 34.38, -90.0, variable.crossbow_charge)  -this", "math.lerp(22.92, 48.70, variable.crossbow_charge) -this", 0]
+				},
+				"rightarm": {
+					"rotation": ["-90.0 + 34.38 -this", "-45.84 -this", 0]
+				}
+			}
+		},
+		"animation.undead_pillager.crossbow.hold": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": ["-85.94 + query.target_x_rotation -this", "34.38 + math.clamp(query.target_y_rotation, -45, 25) -this", 0]
+				},
+				"rightarm": {
+					"rotation": ["-90.0 + 5.73 + query.target_x_rotation -this", "-17.19 + math.clamp(query.target_y_rotation, -25, 45) -this", 0]
+				},
+				"waist": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		},
+		"animation.undead_pillager.emerge": {
+			"animation_length": 3,
+			"bones": {
+				"waist": {
+					"position": {
+						"0.0": [0, -37, 0],
+						"3.0": [0, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [92.5, 0, 0],
+						"1.5": [35, 0, 0],
+						"3.0": [0, 0, 0]
+					}
+				},
+				"rightarm": {
+					"rotation": {
+						"0.0": [0, 0, 155],
+						"1.5": [0, 0, 76.25],
+						"2.0": [0, 0, 0]
+					}
+				},
+				"leftarm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 0, -155],
+						"1.0": [0, 0, -155],
+						"1.5": [0, 0, -60],
+						"2.0": [0, 0, -2.5]
+					}
+				}
+			}
+		}
+	}
+}

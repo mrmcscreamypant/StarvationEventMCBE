@@ -1,0 +1,14 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"budding_actinium": {
+			"textures": "textures/blocks/budding_actinium.png"
+		},
+		"sky_stone": {
+			"textures": "textures/blocks/sky_stone.png"
+		}
+	}
+}
