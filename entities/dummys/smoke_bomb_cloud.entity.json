@@ -1,0 +1,53 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier":"se:smoke_bomb_cloud",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "se:despawn": {
+        "minecraft:instant_despawn":{}
+      }
+    },
+    "components": {
+      "minecraft:physics": {
+        "has_collision": false,
+        "has_gravity": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:mob_effect": {
+        "effect_range": 4,
+        "mob_effect": "blindness",
+        "effect_time": 2
+      },
+      "minecraft:timer":{
+        "looping": true,
+        "time": 7,
+        "time_down_event": {
+            "event":"se:trigger_despawn"
+        }
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+            "cause": "all",
+            "deals_damage": false
+        }
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+    },
+    "events": {
+      "se:trigger_despawn": {
+        "add": {
+          "component_groups": [ "se:despawn" ]
+        }
+      }
+    }
+  }
+}

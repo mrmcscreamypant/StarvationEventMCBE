@@ -220,6 +220,11 @@
 			"minecraft:follow_range": {
 				"value": 64
 			},
+			"minecraft:boss":{
+			    "hud_range": 32,
+			    "name": "Necromancer",
+			    "should_darken_sky": false
+			},
 			"minecraft:conditional_bandwidth_optimization": {}
 		},
 		"events": {

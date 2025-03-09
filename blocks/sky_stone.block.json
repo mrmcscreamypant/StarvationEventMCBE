@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "se:sky_stone",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.stone"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:selection_box": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 8
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 200
+			},
+			"minecraft:geometry": "geometry.sky_stone",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sky_stone",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:map_color": "#ffffff"
+		}
+	}
+}

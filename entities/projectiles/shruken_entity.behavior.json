@@ -1,0 +1,66 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "se:shruken_entity",
+			"runtime_identifier": "minecraft:arrow",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 0.4,
+						"height": 0.01,
+						"pivot": [0, 0.055, 0]
+					}
+				]
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"impact_damage": {
+						"damage": [4, 6],
+						"knockback": true,
+						"semi_random_diff_damage": false,
+						"destroy_on_hit": true
+					},
+					"stick_in_ground": {
+		              "shake_time" : 0.35
+		            }
+				},
+				"power": 1.6,
+				"gravity": 0.03,
+				"inertia": 1,
+				"angle_offset": -0,
+				"uncertainty_base": 8,
+				"uncertainty_multiplier": 2,
+				"anchor": 1,
+				"should_bounce": false,
+				"offset": [0, -0.1, 0]
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/shruken_entity.json"
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 80,
+					"max_dropped_ticks": 4,
+					"use_motion_prediction_hints": true
+				}
+			}
+		}
+	}
+}

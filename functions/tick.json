@@ -2,6 +2,7 @@
   "values": [
     "items/tick",
     "api/tick",
-    "init/pre_init"
+    "init/pre_init",
+    "entities/tick"
   ]
 }

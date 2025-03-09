@@ -28,28 +28,6 @@
 					}
 				}
 			},
-			"minecraft:ranged_attack": {
-				"minecraft:behavior.ranged_attack": {
-					"priority": 4,
-					"attack_interval_min": 1,
-					"attack_interval_max": 1,
-					"attack_radius": 8
-				},
-				"minecraft:shooter": {
-					"def": "minecraft:arrow"
-				},
-				"minecraft:environment_sensor": {
-					"triggers": {
-						"filters": {
-							"test": "is_underwater",
-							"subject": "self",
-							"operator": "==",
-							"value": true
-						},
-						"event": "minecraft:melee_mode"
-					}
-				}
-			},
 			"minecraft:melee_attack": {
 				"minecraft:behavior.melee_attack": {
 					"priority": 4,
@@ -115,8 +93,8 @@
 				"suffocate_time": 0
 			},
 			"minecraft:health": {
-				"value": 24,
-				"max": 24
+				"value": 16,
+				"max": 16
 			},
 			"minecraft:conditional_bandwidth_optimization": {},
 			"minecraft:hurt_on_condition": {
@@ -156,7 +134,7 @@
 			"minecraft:jump.static": {},
 			"minecraft:nameable": {},
 			"minecraft:equipment": {
-				"table": "loot_tables/entities/pillager_gear.json"
+				"table": "loot_tables/entities/undead_pillager_gear.json"
 			},
 			"minecraft:despawn": {
 				"despawn_from_distance": {}
@@ -244,13 +222,9 @@
 			"minecraft:behavior.random_look_around": {
 				"priority": 10
 			},
-			"minecraft:behavior.charge_held_item": {
-				"priority": 3,
-				"items": ["minecraft:arrow"]
-			},
 			"minecraft:physics": {},
 			"minecraft:pushable": {
-				"is_pushable": true,
+				"is_pushable": false,
 				"is_pushable_by_piston": true
 			},
 			"minecraft:follow_range": {
@@ -260,7 +234,7 @@
 		"events": {
 			"minecraft:entity_spawned": {
 				"add": {
-					"component_groups": ["minecraft:ranged_attack"]
+					"component_groups": ["minecraft:melee_attack"]
 				}
 			},
 			"minecraft:spawn_for_raid": {
@@ -292,22 +266,6 @@
 				},
 				"remove": {
 					"component_groups": ["minecraft:patrol_follower"]
-				}
-			},
-			"minecraft:melee_mode": {
-				"remove": {
-					"component_groups": ["minecraft:ranged_attack"]
-				},
-				"add": {
-					"component_groups": ["minecraft:melee_attack"]
-				}
-			},
-			"minecraft:ranged_mode": {
-				"remove": {
-					"component_groups": ["minecraft:melee_attack"]
-				},
-				"add": {
-					"component_groups": ["minecraft:ranged_attack"]
 				}
 			},
 			"minecraft:start_celebrating": {

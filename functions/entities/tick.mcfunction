@@ -1,0 +1,3 @@
+function entities/undead_pillager/tick
+function entities/smoke_bomb_cloud/tick
+function entities/ornothopter/tick

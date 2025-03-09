@@ -1,0 +1,57 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "se:smoke_bomb_entity",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:egg"
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 0.31,
+				"height": 0.31
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"spawn_chance": {
+			            "first_spawn_percent_chance": 100,
+			            "first_spawn_count": 1,
+			            "spawn_definition": "se:smoke_bomb_cloud",
+			            "spawn_baby": false
+			        },
+			        "remove_on_hit": {}
+				},
+				"power": 1.6,
+				"gravity": 0.08,
+				"inertia": 1,
+				"liquid_inertia": 1,
+				"uncertainty_base": 0,
+				"uncertainty_multiplier": 0,
+				"anchor": 1,
+				"offset": [0, -0.1, 0],
+				"reflect_on_hurt": false,
+				"catch_fire": false
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 80,
+					"max_dropped_ticks": 7,
+					"use_motion_prediction_hints": true
+				}
+			}
+		}
+	}
+}

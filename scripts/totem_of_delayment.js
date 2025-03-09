@@ -25,7 +25,7 @@ world.afterEvents.entityHurt.subscribe(event => {
 
 system.afterEvents.scriptEventReceive.subscribe((event) => {
   if (event.id==="se:totem_of_delayment_timeout") {
-		event.sourceEntity.applyDamage(event.sourceEntity.getProperty("se:totem_of_delayment_stacked_damage")+20)
+		event.sourceEntity.applyDamage(event.sourceEntity.getProperty("se:totem_of_delayment_stacked_damage")+40)
 	
 	event.sourceEntity.setProperty("se:totem_of_delayment_stacked_damage",0)
 }})}
